@@ -10,11 +10,11 @@ public class mapPaoSort {
             return;
         }
         for (int i = 0; i < arrays.length - 1; i++) {
-            for (int j = i + 1; j < arrays.length; j++) {
-                if (arrays[i] > arrays[j]) {
-                    int temp = arrays[i];
-                    arrays[i] = arrays[j];
-                    arrays[j] = temp;
+            for (int j = 0; j < arrays.length - 1; j++) {
+                if (arrays[j] > arrays[j + 1]) {
+                    int temp = arrays[j];
+                    arrays[j] = arrays[j + 1];
+                    arrays[j + 1] = temp;
                 }
             }
         }
