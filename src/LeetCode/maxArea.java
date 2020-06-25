@@ -37,6 +37,7 @@ public class maxArea {
             // 向内移动短板可以得到最大收益值
             res = height[left] < height[right] ? Math.max(res, height[left++] * (right - left)) : Math.max(res, height[right--] * (right - left));
         }
+        return res;
     }
 
     public static void main(String[] args) {
