@@ -1,4 +1,4 @@
-package LeetCode.Arrays;
+package LeetCode.Arrays.DP;
 
 public class jump {
 
@@ -30,6 +30,7 @@ public class jump {
         for (int i = 0; i < nums.length-1; i++) {
             // 找到从当前位置能跳到的最远位置
             maxJump = Math.max(maxJump, nums[i] + i);
+            // 如果maxright还在数组长度范围内，就必然会进入到这个if中，就说明当前的maxJump还没有跳到数组的最后位置
             if (i == maxright) {
                 step++;
                 // 更新现在跳了多少次能跳的最远距离
