@@ -1,4 +1,4 @@
-package LeetCode.Arrays;
+package LeetCode.Arrays.LuoXuanJuZhen;
 
 public class rotate {
 
