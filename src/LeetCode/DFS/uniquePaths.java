@@ -6,6 +6,8 @@ public class uniquePaths {
     public static void main(String[] args) {
         uniquePaths(23, 12);
     }
+
+    private static int res = 0;
     /**
      * 不同路径
      * 一个机器人位于一个 m x n 网格的左上角 （起始点在下图中标记为“Start” ）。
@@ -15,8 +17,6 @@ public class uniquePaths {
      * @param n
      * @return
      */
-    private static int res = 0;
-
     public static int uniquePaths(int m, int n) {
         int rowstart = 0;
         int colstart = 0;
@@ -33,6 +33,5 @@ public class uniquePaths {
         }
         bfs(m,n,rowstart+1,colstart);
         bfs(m,n,rowstart,colstart+1);
-        return;
     }
 }
