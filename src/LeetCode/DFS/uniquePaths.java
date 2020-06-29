@@ -1,4 +1,4 @@
-package LeetCode.BFS;
+package LeetCode.DFS;
 
 public class uniquePaths {
 
