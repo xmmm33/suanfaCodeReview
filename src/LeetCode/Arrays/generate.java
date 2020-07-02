@@ -8,7 +8,7 @@ public class generate {
 
 
     public static void main(String[] args) {
-        generate(5);
+        generateII(3);
     }
     /**
      * 杨辉三角
@@ -31,6 +31,36 @@ public class generate {
                 }
             }
             ret.add(tmep);
+        }
+        return ret;
+    }
+
+
+    /**
+     * 杨辉三角II
+     * @param numRows
+     * @return
+     */
+    public static List<Integer> generateII(int numRows) {
+        List<Integer> ret = new ArrayList<>();
+        List<Integer> lastret = new ArrayList<>();
+        for (int i = 1; i <= numRows+1; i++) {
+            List<Integer> tmep = new ArrayList<>();
+            for (int j = 0; j < i; j++) {
+                if (i > 1) {
+                    if (j == 0 || j == i-1) {
+                        tmep.add(1);
+                    }else {
+                        tmep.add(lastret.get(j - 1) + lastret.get(j));
+                    }
+                }else {
+                    tmep.add(1);
+                }
+            }
+            if (i == numRows+1) {
+                ret = tmep;
+            }
+            lastret = tmep;
         }
         return ret;
     }
