@@ -1,15 +1,9 @@
-package LeetCode.Arrays;
+package LeetCode.Arrays.DP;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class minimumTotal {
-
-    public static void main(String[] args) {
-        List<List<Integer>> temp = new ArrayList<>();
-        List<Integer> a1 = new ArrayList<>();
-    }
-
 
     public static int minimumTotal(List<List<Integer>> triangle) {
         // 特判
