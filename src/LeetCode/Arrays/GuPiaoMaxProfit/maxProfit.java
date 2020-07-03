@@ -1,4 +1,4 @@
-package LeetCode.Arrays.DP;
+package LeetCode.Arrays.GuPiaoMaxProfit;
 
 /**
  * @author humingjiang 2020-07-03 21:06
