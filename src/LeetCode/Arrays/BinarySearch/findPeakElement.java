@@ -1,4 +1,4 @@
-package LeetCode.Arrays.SearchXuanZhuanJuZhen;
+package LeetCode.Arrays.BinarySearch;
 
 /**
  * @author humingjiang 2020-07-04 15:51

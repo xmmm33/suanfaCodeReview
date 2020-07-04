@@ -1,4 +1,4 @@
-package LeetCode.Arrays.SearchXuanZhuanJuZhen;
+package LeetCode.Arrays.BinarySearch;
 
 public class search {
 
