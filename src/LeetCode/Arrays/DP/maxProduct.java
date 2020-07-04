@@ -25,11 +25,30 @@ public class maxProduct {
             if (nums[i] < 0) {
                 int temp = imax;
                 imax = imin;
-                imin = imax;
+                imin = temp;
             }
             imax = Math.max(imax * nums[i], nums[i]);
             imin = Math.min(imin * nums[i], nums[i]);
             max = Math.max(imax, max);
+        }
+        return max;
+    }
+
+    /**
+     * 最大连续子数组的和
+     * @param nums
+     * @return
+     */
+    public static int maxProductSum(int[] nums) {
+        if (nums == null || nums.length < 1) {
+            return 0;
+        }
+        int[] dp = new int[nums.length];
+        dp[0] = nums[0];
+        int max = nums[0];
+        for (int i = 1; i < nums.length; i++) {
+            dp[i] = Math.max(dp[i - 1] + nums[i], nums[i]);
+            max = Math.max(dp[i], max);
         }
         return max;
     }
