@@ -1,4 +1,4 @@
-package LeetCode.Arrays;
+package LeetCode.Arrays.SlideWindow;
 
 import java.util.ArrayList;
 import java.util.Arrays;
