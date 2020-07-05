@@ -11,7 +11,7 @@ public class isPowerOfTwo {
      * 此时，n-1的二进制数一定会是当前位变为0，其他位全是1，这样n与n-1操作，就会是0；
      */
     public boolean isPowerOfTwo(int n) {
-        if (n < 0) {
+        if (n <= 0) {
             return false;
         }
         return (n & (n - 1)) == 0;
