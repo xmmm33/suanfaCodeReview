@@ -1,4 +1,4 @@
-package LeetCode.Arrays;
+package LeetCode.Arrays.DoublePointer;
 
 public class removeElement {
 

@@ -1,4 +1,4 @@
-package LeetCode.Arrays;
+package LeetCode.Arrays.DoublePointer;
 
 /**
  * @author humingjiang 2020-07-05 15:13
