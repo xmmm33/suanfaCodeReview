@@ -1,4 +1,4 @@
-package LeetCode.Arrays.DP;
+package LeetCode.DP;
 
 public class maxSubArray {
 

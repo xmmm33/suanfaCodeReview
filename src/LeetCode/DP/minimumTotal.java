@@ -1,6 +1,5 @@
-package LeetCode.Arrays.DP;
+package LeetCode.DP;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class minimumTotal {
