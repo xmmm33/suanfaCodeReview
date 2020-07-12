@@ -1,6 +1,5 @@
 package LeetCode.Arrays;
 
-import LeetCode.BinTree.buildTree;
 
 /**
  * @author humingjiang 2020-07-12 16:26
