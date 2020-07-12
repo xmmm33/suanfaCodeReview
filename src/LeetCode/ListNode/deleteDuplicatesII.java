@@ -5,7 +5,7 @@ import java.util.List;
 /**
  * @author humingjiang 2020-07-12 11:40
  **/
-public class deleteDuplicates {
+public class deleteDuplicatesII {
 
     public static void main(String[] args) {
         ListNode head = ListNode.buildList(new int[]{1, 2, 3, 3, 4, 4, 5});
