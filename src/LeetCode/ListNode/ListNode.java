@@ -10,4 +10,14 @@ public class ListNode {
     ListNode(int x) {
         val = x;
     }
+
+    public static ListNode buildList(int[] nums) {
+        ListNode head = new ListNode(-1);
+        ListNode newHead = head;
+        for (int i = 0; i < nums.length; i++) {
+            head.next = new ListNode(nums[i]);
+            head = head.next;
+        }
+        return newHead.next;
+    }
 }
