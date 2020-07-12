@@ -26,11 +26,17 @@ public class reverseKGroup {
         }
         // 反转k个元素
         ListNode newHead = reverseList(head, tail);
-        // 下一次元素开始的地方就是tail
+        // 下一次元素开始的地方就是tail;head.next的意思就是这一次反转完成的链表头的下一个位置是 下一次k个元素反转完成的链表头
         head.next = reverseKGroup(tail, k);
         return newHead;
     }
 
+    /**
+     * 反转链表
+     * @param head
+     * @param tail
+     * @return
+     */
     private ListNode reverseList(ListNode head, ListNode tail) {
         ListNode pre = null;
         ListNode next = null;
