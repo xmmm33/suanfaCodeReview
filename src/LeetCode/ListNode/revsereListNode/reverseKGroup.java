@@ -1,4 +1,5 @@
-package LeetCode.ListNode;
+package LeetCode.ListNode.revsereListNode;
+
 
 /**
  * @author humingjiang 2020-07-12 10:31
