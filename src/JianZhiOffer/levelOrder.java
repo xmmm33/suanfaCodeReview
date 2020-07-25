@@ -1,5 +1,7 @@
 package JianZhiOffer;
 
+import org.omg.PortableInterceptor.INACTIVE;
+
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -63,6 +65,37 @@ public class levelOrder {
                 }
             }
             ret.add(temp);
+        }
+        return ret;
+    }
+
+    public List<List<Integer>> levelOrder3(TreeNode root) {
+        if (root == null) {
+            return new ArrayList<>();
+        }
+        List<List<Integer>> ret = new ArrayList<>();
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.add(root);
+        boolean flag = true;
+        while (!queue.isEmpty()) {
+            int size = queue.size();
+            List<Integer> temp = new ArrayList<>();
+            for (int i = 0; i < size; i++) {
+                TreeNode node = queue.poll();
+                if (flag) {
+                    temp.add(node.val);
+                }else {
+                    temp.add(0, node.val);
+                }
+                if (node.left != null) {
+                    queue.offer(node.left);
+                }
+                if (node.right != null) {
+                    queue.offer(node.right);
+                }
+            }
+            ret.add(temp);
+            flag = !flag;
         }
         return ret;
     }
