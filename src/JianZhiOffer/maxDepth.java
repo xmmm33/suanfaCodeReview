@@ -14,13 +14,6 @@ public class maxDepth {
         if (root == null) {
             return 0;
         }
-        return 1 + Math.max(dfs(root.left), dfs(root.right));
-    }
-
-    private int dfs(TreeNode root) {
-        if (root == null) {
-            return 0;
-        }
-        return Math.max(dfs(root.left) + 1, dfs(root.right) + 1);
+        return 1 + Math.max(maxDepth(root.left), maxDepth(root.right));
     }
 }
