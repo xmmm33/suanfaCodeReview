@@ -7,6 +7,8 @@ public class verifyPostorder {
 
     /**
      * 二叉搜索树的后续遍历序列判断合法性
+     * 思路：
+     *      首先就是根据后序遍历的特性，找到左子树和右子树的最后一个下标
      * @param postorder
      * @return
      */
