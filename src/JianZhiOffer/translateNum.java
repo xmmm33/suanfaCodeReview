@@ -15,7 +15,7 @@ public class translateNum {
         String string = String.valueOf(num);
         int a = 1;
         int b = 1;
-        for (int i = 2; i < string.length(); i++) {
+        for (int i = 2; i <= string.length(); i++) {
             String temp = string.substring(i - 2, i);
             int c = temp.compareTo("10") >= 0 && temp.compareTo("25") <= 0 ? a + b : a;
             b = a;
