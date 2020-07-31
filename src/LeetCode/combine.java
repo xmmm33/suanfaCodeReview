@@ -12,6 +12,7 @@ public class combine {
     /**
      * 组合
      * 给定两个整数 n 和 k，返回 1 ... n 中所有可能的 k 个数的组合
+     *
      */
     public List<List<Integer>> combine(int n, int k) {
         boolean[] vis = new boolean[n+1];
