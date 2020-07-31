@@ -36,6 +36,7 @@ public class finishShuDu {
         // dfs
         for (int num = 0; num < 9; num++) {
             int boxindex = i * 3 / 3 + j / 3;
+            // 当前列和当前行和当前3x3方格没有出现该num，才可以设置当前位置为num
             if (!row[i][num] && !col[j][num] && !box[boxindex][num]) {
                 board[i][j] = (char) ('1' + num);
                 row[i][num] = true;
