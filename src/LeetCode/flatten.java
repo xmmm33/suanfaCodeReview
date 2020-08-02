@@ -33,6 +33,7 @@ public class flatten {
         }
         flatten(root.left);
         flatten(root.right);
+        // 保留原有右子树
         TreeNode temp = root.right;
         // 把右子树替换为左子树，然后左子树为null，然后遍历右子树，找到最右子节点，挂入原来的右子树
         root.right = root.left;
