@@ -35,4 +35,22 @@ public class lengthOfLongestSubstring {
         }
         return max;
     }
+    public int lengthOfLongestSubstring2(String s) {
+        if (s == null || s.length() < 1) {
+            return 0;
+        }
+        int ret = 0;
+        int left =0;
+        int right = 0;
+        Map<Character, Integer> fz = new HashMap<>();
+        while (right < s.length()) {
+            if (fz.containsKey(s.charAt(right))) {
+                left = Math.max(left, fz.get(s.charAt(right)) + 1);
+            }
+            ret = Math.max(ret, right - left + 1);
+            fz.put(s.charAt(right), right);
+            right++;
+        }
+        return ret;
+    }
 }
