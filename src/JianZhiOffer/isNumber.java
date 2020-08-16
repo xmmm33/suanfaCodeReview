@@ -46,4 +46,37 @@ public class isNumber {
         }
         return num;
     }
+
+    public boolean isNumber2(String s) {
+        if (s == null || s.length() < 1) {
+            return false;
+        }
+        boolean num = false;
+        boolean dot = false;
+        boolean e = false;
+        char[] chars = s.trim().toCharArray();
+        for (int i = 0; i < chars.length; i++) {
+            if (chars[i] >= '0' && chars[i] <= '9') {
+                num = true;
+            } else if (chars[i] == '.') {
+                if (dot || !num) {
+                    return false;
+                }
+                dot = true;
+            } else if (chars[i] == 'e' || chars[i] == 'E') {
+                if (e || !num) {
+                    return false;
+                }
+                e = true;
+                num = false;
+            } else if (chars[i] == '+' || chars[i] == '-') {
+                if (i > 0 && chars[i - 1] != 'e' && chars[i - 1] != 'E') {
+                    return false;
+                }
+            }else {
+                return false;
+            }
+        }
+        return num;
+    }
 }
