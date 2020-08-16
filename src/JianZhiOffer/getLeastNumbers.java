@@ -8,6 +8,14 @@ public class getLeastNumbers {
     public static void main(String[] args) {
         getLeastNumbers(new int[]{0, 1, 1, 2, 4, 4, 1, 3, 3, 2}, 6);
     }
+
+    /**
+     * topk
+     * 最大堆找最小的几个数
+     * @param arr
+     * @param k
+     * @return
+     */
     public static int[] getLeastNumbers(int[] arr, int k) {
         if (arr == null || arr.length < 1) {
             return new int[0];
