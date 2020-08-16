@@ -28,4 +28,22 @@ public class deleteNode {
         }
         return shaobing.next;
     }
+
+    public ListNode deleteNode2(ListNode head, int val) {
+        if (head == null) {
+            return head;
+        }
+        ListNode shaobing = new ListNode(-1);
+        shaobing.next = head;
+        ListNode pre = shaobing;
+        ListNode cur = shaobing.next;
+        while (cur != null) {
+            if (cur.val == val) {
+                pre.next = cur.next;
+            }
+            pre = cur;
+            cur = cur.next;
+        }
+        return shaobing.next;
+    }
 }
