@@ -31,4 +31,24 @@ public class isBalanced {
         }
         return 1 + Math.max(dfs(root.left), dfs(root.right));
     }
+
+    public boolean isBalanced2(TreeNode root) {
+        if (root == null) {
+            return true;
+        }
+        int leftDepth = depth(root.left);
+        int right = depth(root.right);
+        if (Math.abs(leftDepth - right) > 1) {
+            return false;
+        }else {
+            return isBalanced2(root.left) && isBalanced2(root.right);
+        }
+    }
+
+    private int depth(TreeNode root) {
+        if (root == null) {
+            return 0;
+        }
+        return 1 + Math.max(depth(root.left), depth(root.right));
+    }
 }

@@ -22,6 +22,24 @@ public class buildTree {
             if (preorder[0] == inorder[i]) {
                 root.left = buildTree(Arrays.copyOfRange(preorder, 1, i + 1), Arrays.copyOfRange(inorder, 0, i));
                 root.right = buildTree(Arrays.copyOfRange(preorder, i + 1, preorder.length), Arrays.copyOfRange(inorder, i + 1, inorder.length));
+<<<<<<< HEAD
+=======
+                break;
+            }
+        }
+        return root;
+    }
+
+    public TreeNode build(int[] preorder, int[] inorder) {
+        if (preorder == null || inorder == null || preorder.length < 1 || inorder.length < 1) {
+            return null;
+        }
+        TreeNode root = new TreeNode(preorder[0]);
+        for (int i = 0; i < inorder.length; i++) {
+            if (inorder[i] == preorder[0]) {
+                root.left = build(Arrays.copyOfRange(preorder, 1, i + 1), Arrays.copyOfRange(inorder, 0, i));
+                root.right = build(Arrays.copyOfRange(preorder, i + 1, preorder.length), Arrays.copyOfRange(inorder, i + 1, inorder.length));
+>>>>>>> 93503772304d6997be36f395114575f7d5f20861
                 break;
             }
         }

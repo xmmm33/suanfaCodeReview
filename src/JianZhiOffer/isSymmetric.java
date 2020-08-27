@@ -30,4 +30,25 @@ public class isSymmetric {
         }
         return false;
     }
+
+    public boolean isSymmetric2(TreeNode root) {
+        if (root == null) {
+            return true;
+        }
+        return isDuiChen(root, root);
+    }
+
+    private boolean isDuiChen(TreeNode left, TreeNode right) {
+        if (left == null && right == null) {
+            return true;
+        }
+        if (left != null && right != null) {
+            if (left.val != right.val) {
+                return false;
+            }else {
+                return isDuiChen(left.left, right.right) && isDuiChen(left.right, right.left);
+            }
+        }
+        return false;
+    }
 }

@@ -5,6 +5,20 @@ package JianZhiOffer;
  **/
 public class fib {
 
+    public int fib3(int n) {
+        if (n < 2) {
+            return n;
+        }
+        int low = 1;
+        int high = 1;
+        int ret = 1;
+        for (int i = 3; i <= n; i++) {
+            ret = low + high;
+            low = high;
+            high = ret;
+        }
+        return ret;
+    }
     /**
      * 斐波拉切数列
      * @param n
