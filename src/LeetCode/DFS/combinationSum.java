@@ -11,7 +11,7 @@ public class combinationSum {
             return new ArrayList<>();
         }
         // 注意：这里start的作用，防止每次遍历都从0开始，导致结果集中有重复的集合
-        dfs(candidates, target, 0, new ArrayList<Integer>(),0);
+        dfs(candidates, target, 0, new ArrayList<>(),0);
         return ret;
     }
 
