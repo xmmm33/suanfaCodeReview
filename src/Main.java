@@ -6,27 +6,40 @@ import java.util.*;
 public class Main {
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int n = scanner.nextInt();
-        long[] dp = new long[n + 1];
-        int two = 0;
-        int three = 0;
-        int five = 0;
-        for (int i = 1; i < dp.length; i++) {
-            long num2 = dp[two] * 10 + 2;
-            long num3 = dp[three] * 10 + 3;
-            long num5 = dp[five] * 10 + 5;
-            dp[i] = Math.min(num2, Math.min(num3, num5));
-            if (num2 == dp[i]) {
-                two++;
+        Scanner sc = new Scanner(System.in);
+        List<String> temp = new ArrayList<>();
+        while (sc.hasNextLine()) {
+            String s = sc.nextLine();
+            if (s.equals("")) {
+                break;
             }
-            if (num3 == dp[i]) {
-                three++;
-            }
-            if (num5 == dp[i]) {
-                five++;
+            temp.add(s);
+        }
+        String lastNumberString = temp.get(temp.size() - 1);
+        String A = temp.get(temp.size() - 2);
+        String teZhengZhiOfLastString = findteZhengZhiOfString(A, lastNumberString);
+        Map<String, String> map = new LinkedHashMap<>();
+        for (int j = 0; j < temp.size() - 2; j++) {
+            String s = findteZhengZhiOfString(A, temp.get(j));
+            map.put(temp.get(j), s);
+        }
+        for (Map.Entry<String, String> entry : map.entrySet()) {
+            if (entry.getValue().contains(teZhengZhiOfLastString)) {
+                System.out.println(entry.getKey());
             }
         }
-        System.out.println(dp[dp.length - 1]);
+    }
+
+    private static String findteZhengZhiOfString(String A, String lastNumberString) {
+        StringBuilder teZhengZhiOfLastString = new StringBuilder();
+        int i = 0;
+        while (i < lastNumberString.length()) {
+            String c = String.valueOf(lastNumberString.charAt(i));
+            if (A.compareTo(c) > 0) {
+                teZhengZhiOfLastString.append(c);
+            }
+            i++;
+        }
+        return teZhengZhiOfLastString.toString();
     }
 }
