@@ -54,4 +54,31 @@ public class treeToDoublyList {
         pre = root;
         zhongxu(root.right);
     }
+
+    Node pree = null;
+    Node headd = null;
+    public Node treeToDoublyList2(Node root) {
+        if (root == null) {
+            return root;
+        }
+        zhongxubianli(root);
+        pree.right = head;
+        headd.left = pree;
+        return headd;
+    }
+
+    private void zhongxubianli(Node root) {
+        if (root == null) {
+            return;
+        }
+        zhongxubianli(root.left);
+        if (pree == null) {
+            head = root;
+        }else {
+            pree.right = root;
+        }
+        root.left = pree;
+        pree = root;
+        zhongxubianli(root.right);
+    }
 }
