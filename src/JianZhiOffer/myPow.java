@@ -51,5 +51,6 @@ public class myPow {
             x = x * x;
             cifang = cifang >> 1;
         }
+        return ret;
     }
 }
