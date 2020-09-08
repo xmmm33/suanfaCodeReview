@@ -19,4 +19,20 @@ public class minNumber {
         }
         return ret.toString();
     }
+
+    public String minNumber2(int[] nums) {
+        if (nums == null || nums.length == 0) {
+            return "";
+        }
+        List<String> tmp = new ArrayList<String>();
+        for (int i = 0; i < nums.length; i++) {
+            tmp.add(String.valueOf(nums[i]));
+        }
+        tmp.sort((a1, a2) -> (a1 + a2).compareTo(a2 + a1));
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < tmp.size(); i++) {
+            sb.append(tmp.get(i));
+        }
+        return sb.toString();
+    }
 }

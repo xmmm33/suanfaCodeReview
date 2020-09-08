@@ -48,15 +48,15 @@ public class levelOrder {
         if (root == null) {
             return new ArrayList<>();
         }
-        List<List<Integer>> ret = new ArrayList<>();
+        List<List<Integer> > result = new ArrayList<> ();
         Queue<TreeNode> queue = new LinkedList<>();
-        queue.add(root);
+        queue.offer(root);
         while (!queue.isEmpty()) {
             int size = queue.size();
-            List<Integer> temp = new ArrayList<>();
+            List<Integer> r = new ArrayList<>();
             for (int i = 0; i < size; i++) {
                 TreeNode node = queue.poll();
-                temp.add(node.val);
+                r.add(node.val);
                 if (node.left != null) {
                     queue.offer(node.left);
                 }
@@ -64,39 +64,9 @@ public class levelOrder {
                     queue.offer(node.right);
                 }
             }
-            ret.add(temp);
+            result.add(r);
         }
-        return ret;
+        return result;
     }
 
-    public List<List<Integer>> levelOrder3(TreeNode root) {
-        if (root == null) {
-            return new ArrayList<>();
-        }
-        List<List<Integer>> ret = new ArrayList<>();
-        Queue<TreeNode> queue = new LinkedList<>();
-        queue.add(root);
-        boolean flag = true;
-        while (!queue.isEmpty()) {
-            int size = queue.size();
-            List<Integer> temp = new ArrayList<>();
-            for (int i = 0; i < size; i++) {
-                TreeNode node = queue.poll();
-                if (flag) {
-                    temp.add(node.val);
-                }else {
-                    temp.add(0, node.val);
-                }
-                if (node.left != null) {
-                    queue.offer(node.left);
-                }
-                if (node.right != null) {
-                    queue.offer(node.right);
-                }
-            }
-            ret.add(temp);
-            flag = !flag;
-        }
-        return ret;
-    }
 }
