@@ -3,7 +3,7 @@ package heapSort;
 public class heapPractice {
 
     public static void main(String[] args) {
-        heap(new int[]{4, 52, 5, 2, 4, 23, 523, 523, 4, 5});
+        heap(new int[]{5,13,9,2,3,19});
     }
 
 
