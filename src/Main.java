@@ -22,7 +22,9 @@ public class Main{
             return 1;
         }
         int i = 0;
-        if (password.matches(num)) i++;
+        if (password.matches(num)) {
+            i++;
+        }
         if (password.matches(daxie)) i++;
         if (password.matches(xiaoxie)) i++;
         if (password.matches(dot)) i++;
