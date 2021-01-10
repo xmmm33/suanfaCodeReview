@@ -9,9 +9,6 @@ public class Main{
 
     public static final String dot = ".*[~!@#$%^&*()_+|<>,.?/:;'\\[\\]{}\"]+.*";
     public static void main(String[] args){
-<<<<<<< HEAD
-
-=======
         Scanner sc = new Scanner(System.in);
         String inputstring = sc.nextLine();
         String[] passwords = inputstring.split(" ");
@@ -33,6 +30,5 @@ public class Main{
             return 2;
         }
         return 0;
->>>>>>> 07163de43e25bce625ddd6c5408568475e63373c
     }
 }
