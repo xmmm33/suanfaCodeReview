@@ -34,6 +34,5 @@ public class combine {
             vis[i] = false;
             path.remove(path.size() - 1);
         }
-        return;
     }
 }

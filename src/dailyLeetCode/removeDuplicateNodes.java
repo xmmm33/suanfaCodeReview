@@ -4,6 +4,9 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
+/**
+ * @author mingjiang
+ */
 public class removeDuplicateNodes {
 
     public class ListNode {
